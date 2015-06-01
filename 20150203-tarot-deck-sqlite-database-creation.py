@@ -6,7 +6,7 @@ import sqlite3
 DB = None
 CONN = None
 
-tarot_deckF = open("tarot-deck-001.tsv")
+tarot_deckF = open("tarot-deck-file.tsv")
 tarot_deck_entry = []
 
 # def deck_from_file(f):
@@ -20,7 +20,7 @@ tarot_deck_entry = []
 
 def connect_to_db():
     global DB, CONN
-    CONN = sqlite3.connect("20150203-tarot-deck-database.db")
+    CONN = sqlite3.connect("tarot-deck.db")
     DB = CONN.cursor()
     
 def make_new_entry(file_name):
