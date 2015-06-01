@@ -42,11 +42,11 @@ def tarot_draw(draws):
 
 	for i in range(draws):
 
-		print "THIS", i
+		# print "THIS", i
 		
 		draw = random.randint(1,78)
 
-		print draw
+		# print draw
 		
 		query = """SELECT card_name FROM Tarot WHERE card_id = ?"""
 		
@@ -56,7 +56,7 @@ def tarot_draw(draws):
 	
 		reading.append(card)
 
-	return reading
+	print reading
 
 def main():
 	connect_to_db()
@@ -64,5 +64,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-print main()
